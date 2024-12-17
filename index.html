@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Example</title>
+    <style> .container { display: grid; grid-template-columns: repeat(3, 1fr); /* Создаем три колонки одинаковой ширины */ grid-auto-rows: 100px; 100px; /* Высота строк по умолчанию */ gap: 10px; /* Пробел между ячейками */ } .item { background-color: #2196F3; color: white; font-size: 24px; display: flex; justify-content: center; align-items: center; } /* Определяем последовательность вывода ячеек */ .item:nth-child(1) { grid-area: 1 / 1 / 2 / 4; } /* Первая ячейка занимает всю первую строку */ .item:nth-child(2) { grid-area: 2 / 1 / 3 / 2; } /* Вторая ячейка занимает первую колонку второй строки */ .item:nth-child(3) { grid-area: 2 / 2 / 3 / 3; } /* Третья ячейка занимает вторую колонку второй строки */ .item:nth-child(4) { grid-area: 2 / 3 / 3 / 4; } /* Четвертая ячейка занимает третью колонку второй строки */ .item:nth-child(5) { grid-area: 3 / 1 / 4 / 2; } /* Пятая ячейка занимает первую колонку третьей строки */ .item:nth-child(6) { grid-area: 3 / 2 / 4 / 4; } /* Шестая ячейка занимает оставшиеся две колонки третьей строки */ </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+    </div>
+</body>
+</html>
